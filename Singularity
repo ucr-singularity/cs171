@@ -108,8 +108,9 @@ pip install --no-cache-dir tinkerer
 pip install --no-cache-dir Pweave
 pip install --no-cache-dir numba
 
-# TensorFlow
-pip install --no-cache-dir tensorflow-gpu==1.8
+# TensorFlow, from conda instead of pip (pip is not working for it right now)
+conda install -y -c anaconda tensorflow-gpu
+#pip install --no-cache-dir tensorflow-gpu==1.8
     
 # Deep Mind Sonnet
 pip install --no-cache-dir dm-sonnet-gpu==1.17
