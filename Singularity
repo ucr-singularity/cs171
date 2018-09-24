@@ -127,7 +127,7 @@ pip install --no-cache-dir keras==2.2.1
 pip install --no-cache-dir opencv-contrib-python    
 
 # Install Pydensecrf
-pip install git+https://github.com/lucasb-eyer/pydensecrf.git
+#pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 
 # Set locale in environment
 echo 'export LC_ALL=C' >>$SINGULARITY_ENVIRONMENT
