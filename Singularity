@@ -25,12 +25,12 @@ apt-get install -y --no-install-recommends build-essential cmake git curl vim ca
 apt-get install -y screen terminator tmux vim wget 
 apt-get install -y aptitude build-essential cmake g++ gfortran git pkg-config python-pip python-dev software-properties-common
 apt-get install -y unrar
-
+ 
 # Python modules from system package manager
 apt-get install -y python-numpy python-scipy python-nose python-h5py \
     python-skimage python-matplotlib python-pandas python-sklearn \
     python-sympy python-virtualenv
-   
+    
 # More dependencies/useful software from system package manager
 apt-get install -v libopenblas-dev libfreetype7-dev libpng12-dev \
     libglib2.0-0 libsm6 libxext6 libxrender1
@@ -157,6 +157,9 @@ pip install --no-cache-dir ipykernel
     
 # Workaround for Tensorflow from Anaconda looking for libcuda.so.1
 ln -s /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so.1
+
+# Add packages that are also in system python via conda or pip
+conda install -y -c anaconda scipy nose h5py scikit-image scikit-learn matplotlib pandas sympy virtualenv pygments sphinx 
 
 echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/' >>$SINGULARITY_ENVIRONMENT
