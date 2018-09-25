@@ -155,4 +155,7 @@ pip install --no-cache-dir scikit-learn==0.19.2
 # For integration with JupyterHub
 pip install --no-cache-dir ipykernel
     
+# Workaround for Tensorflow from Anaconda looking for libcuda.so.1
+ln -s /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so.1
+
 echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
