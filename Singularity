@@ -165,5 +165,6 @@ conda install -y -c anaconda scipy nose h5py scikit-image scikit-learn matplotli
 conda install -c anaconda pysal
 pip install --no-cache-dir folium 
 
+
 echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/' >>$SINGULARITY_ENVIRONMENT
