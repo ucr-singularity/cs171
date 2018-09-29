@@ -86,8 +86,9 @@ conda install -c soumith magma-cuda90
 conda clean -ya
     
 # Install the released version of Pytorch.
+# Pytorch is (temporarily?) broken as of 2018-09-28
 #conda install torchvision cuda90 -c pytorch
-conda install -c pytorch pytorch 
+#conda install -c pytorch pytorch 
 
 # PIL (actually Pillow)
 pip install --no-cache-dir Pillow
@@ -165,7 +166,6 @@ conda install -y -c anaconda scipy nose h5py scikit-image scikit-learn matplotli
 # PySAL 
 conda install -c anaconda pysal
 pip install --no-cache-dir folium 
-
 
 echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/' >>$SINGULARITY_ENVIRONMENT
