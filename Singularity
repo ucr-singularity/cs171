@@ -86,8 +86,9 @@ conda install -c soumith magma-cuda90
 conda clean -ya
     
 # Install the released version of Pytorch.
-conda install pytorch torchvision cuda90 -c pytorch
-   
+#conda install torchvision cuda90 -c pytorch
+conda install -c pytorch pytorch 
+
 # PIL (actually Pillow)
 pip install --no-cache-dir Pillow
     
