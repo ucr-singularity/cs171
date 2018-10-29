@@ -5,7 +5,12 @@ From: nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 PATH=/opt/conda/bin:$PATH
 export PATH
-  
+
+# Path additions
+export MKL_NUM_THREADS=3
+export NUMEXPR_NUM_THREADS=3
+export OMP_NUM_THREADS=3
+
 %post
   
 # Set up the PATH for other commands
