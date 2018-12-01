@@ -20,7 +20,7 @@ export PATH=/opt/conda/bin:$PATH
 apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 
-# Workaround for https://github.com/keras-team/keras/issues/9567
+# Workaround for https://github.com/-team/keras/issues/9567
 apt-get install -y --allow-downgrades --no-install-recommends \
     --allow-change-held-packages \
     libcudnn7=7.0.5.15-1+cuda9.0 libcudnn7-dev=7.0.5.15-1+cuda9.0 
@@ -166,11 +166,7 @@ pip install --no-cache-dir ipykernel
 ln -s /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so /usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/libcuda.so.1
 
 # Add packages that are also in system python via conda or pip
-conda install -y -c anaconda scipy nose h5py scikit-image scikit-learn matplotlib pandas sympy virtualenv pygments sphinx 
-
-# PySAL 
-conda install -c anaconda pysal
-pip install --no-cache-dir folium 
+conda install -y -c anaconda scipy nose h5py scikit-image scikit-learn matplotlib pandas sympy virtualenv pygments sphinx
 
 echo 'export PATH=/opt/conda/bin:$PATH' >>$SINGULARITY_ENVIRONMENT
 echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/targets/x86_64-linux/lib/stubs/' >>$SINGULARITY_ENVIRONMENT
